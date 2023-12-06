@@ -1,3 +1,4 @@
+
 # Documentation
 
 # Library Management System
@@ -16,7 +17,7 @@ The application uses JsonWebTokens (JWT) for authentication to enhance security.
 
 The application caters to two types of users: Librarians and Patrons (General public). Both groups have access to different features tailored to their specific needs. The following is a list of features and their explanations for each type of user:
 
-
+```
 Librarian:
 a. Issue - The ability to issue books to users.
 b. Return - The ability to un-issue books from users.
@@ -47,7 +48,7 @@ h. Related Books - The ability to view all books related to a specific genre.
 i. Review - The ability to rate and comment on books they have issued.
 j. View E-Book - Users can view PDF of their issued books in realtime
 
-
+```
 
 ### General
 
@@ -90,377 +91,377 @@ This frontend of this website is hosted on Netlify and backend is hosted on Adap
 
 For backend clone the repository by running the following command
 
-
+```
 git clone https://github.com/roshanshetty28/lmsbackend.git
 
-
+```
 
 For Frontend clone the repository by running the following command
 
-
+```
 git clone https://github.com/roshanshetty28/lmsfrontend.git
 
-
+```
 
 Then run the below command at the root of both backend and frontend to install all the dependencies
 
-
+```
 npm install
 
-
+```
 
 ### Executing program
 
 to run the Backend excute the following command in the root folder of backend
 
-
+```
 npm run srever
 
-
+```
 
 Make the following changes before running the frontend in your local machine
 
-
+```
 API_URL = http://localhost:{PORT_NUMBER}/
 
-
+```
 
 In authService.js, adminService.js and userService.js
 
 to run the Frontend excute the following command in the root folder of frontend
 
-npm run start
+`npm run start`
 
 ## API Endpoints documentation
 
-## *User API*
+## **User API**
 
 This API documentation outlines the endpoints and functionalities provided by the User API for managing books and user-related actions.
 
-### *Authentication*
+### **Authentication**
 
-All endpoints except */forgotlink* and */forgotpass* require authentication. Authentication is performed using a JSON Web Token (JWT) passed in the Authorization header.
+All endpoints except **`/forgotlink`** and **`/forgotpass`** require authentication. Authentication is performed using a JSON Web Token (JWT) passed in the Authorization header.
 
-### *1. Get User's Issued Books*
+### **1. Get User's Issued Books**
 
-- *Endpoint: *GET /**
-- *Authentication*: Yes
-- *Description*: Retrieves the list of books issued to the authenticated user.
+- **Endpoint**: **`GET /`**
+- **Authentication**: Yes
+- **Description**: Retrieves the list of books issued to the authenticated user.
 
-### *2. Get All Books from the Inventory*
+### **2. Get All Books from the Inventory**
 
-- *Endpoint: *GET /all**
-- *Authentication*: Yes
-- *Description*: Retrieves all books available in the inventory.
+- **Endpoint**: **`GET /all`**
+- **Authentication**: Yes
+- **Description**: Retrieves all books available in the inventory.
 
-### *3. Get All Books Requested by Users*
+### **3. Get All Books Requested by Users**
 
-- *Endpoint: *GET /requested**
-- *Authentication*: Yes
-- *Description*: Retrieves the list of books requested by users.
+- **Endpoint**: **`GET /requested`**
+- **Authentication**: Yes
+- **Description**: Retrieves the list of books requested by users.
 
-### *4. Request a Book*
+### **4. Request a Book**
 
-- *Endpoint: *PATCH /request/:id**
-- *Authentication*: Yes
-- *Description*: Requests a particular book identified by its ID.
+- **Endpoint**: **`PATCH /request/:id`**
+- **Authentication**: Yes
+- **Description**: Requests a particular book identified by its ID.
 
-### *5. Cancel Request for a Book*
+### **5. Cancel Request for a Book**
 
-- *Endpoint: *PATCH /cancel/:id**
-- *Authentication*: Yes
-- *Description*: Cancels a previous request for a particular book identified by its ID.
+- **Endpoint**: **`PATCH /cancel/:id`**
+- **Authentication**: Yes
+- **Description**: Cancels a previous request for a particular book identified by its ID.
 
-### *6. Get Details of a Book*
+### **6. Get Details of a Book**
 
-- *Endpoint: *GET /book/:id**
-- *Authentication*: Yes
-- *Description*: Retrieves details of a particular book identified by its ID.
+- **Endpoint**: **`GET /book/:id`**
+- **Authentication**: Yes
+- **Description**: Retrieves details of a particular book identified by its ID.
 
-### *7. Get Related Books*
+### **7. Get Related Books**
 
-- *Endpoint: *GET /related**
-- *Authentication*: Yes
-- *Description*: Retrieves all books related to a particular genre.
+- **Endpoint**: **`GET /related`**
+- **Authentication**: Yes
+- **Description**: Retrieves all books related to a particular genre.
 
-### *8. Unsubscribe from News-Letter*
+### **8. Unsubscribe from News-Letter**
 
-- *Endpoint: *PATCH /unsubscribe/:id**
-- *Authentication*: Yes
-- *Description*: Unsubscribes the user from the newsletter.
+- **Endpoint**: **`PATCH /unsubscribe/:id`**
+- **Authentication**: Yes
+- **Description**: Unsubscribes the user from the newsletter.
 
-### *9. Get Link for Resetting Password*
+### **9. Get Link for Resetting Password**
 
-- *Endpoint: *POST /forgotlink**
-- *Authentication*: No
-- *Description*: Generates and sends a link to the user's email for resetting the password.
+- **Endpoint**: **`POST /forgotlink`**
+- **Authentication**: No
+- **Description**: Generates and sends a link to the user's email for resetting the password.
 
-### *10. Reset Password*
+### **10. Reset Password**
 
-- *Endpoint: *POST /forgotpass**
-- *Authentication*: No
-- *Description*: Resets the user's password using the provided link.
+- **Endpoint**: **`POST /forgotpass`**
+- **Authentication**: No
+- **Description**: Resets the user's password using the provided link.
 
-### *11. Add Book to Wishlist*
+### **11. Add Book to Wishlist**
 
-- *Endpoint: *PATCH /addwish/:id**
-- *Authentication*: Yes
-- *Description*: Adds a particular book identified by its ID to the user's wishlist.
+- **Endpoint**: **`PATCH /addwish/:id`**
+- **Authentication**: Yes
+- **Description**: Adds a particular book identified by its ID to the user's wishlist.
 
-### *12. Get User's Wishlist*
+### **12. Get User's Wishlist**
 
-- *Endpoint: *GET /wishlist**
-- *Authentication*: Yes
-- *Description*: Retrieves all books from the user's wishlist.
+- **Endpoint**: **`GET /wishlist`**
+- **Authentication**: Yes
+- **Description**: Retrieves all books from the user's wishlist.
 
-### *13. Remove Book from Wishlist*
+### **13. Remove Book from Wishlist**
 
-- *Endpoint: *PATCH /remove/:id**
-- *Authentication*: Yes
-- *Description*: Removes a particular book identified by its ID from the user's wishlist.
+- **Endpoint**: **`PATCH /remove/:id`**
+- **Authentication**: Yes
+- **Description**: Removes a particular book identified by its ID from the user's wishlist.
 
-### *14. Send Contact Mail to Admin*
+### **14. Send Contact Mail to Admin**
 
-- *Endpoint: *POST /contact**
-- *Authentication*: Yes
-- *Description*: Sends a contact email to the admin.
+- **Endpoint**: **`POST /contact`**
+- **Authentication**: Yes
+- **Description**: Sends a contact email to the admin.
 
-### *15. Subscribe to News-Letter*
+### **15. Subscribe to News-Letter**
 
-- *Endpoint: *POST /subscribe**
-- *Authentication*: Yes
-- *Description*: Subscribes the user to the newsletter.
+- **Endpoint**: **`POST /subscribe`**
+- **Authentication**: Yes
+- **Description**: Subscribes the user to the newsletter.
 
-### *16. Write Review on a Book*
+### **16. Write Review on a Book**
 
-- *Endpoint: *POST /add-review**
-- *Authentication*: Yes
-- *Description*: Allows the user to write a review for a particular book.
+- **Endpoint**: **`POST /add-review`**
+- **Authentication**: Yes
+- **Description**: Allows the user to write a review for a particular book.
 
-### *17. Delete a Comment from a Book*
+### **17. Delete a Comment from a Book**
 
-- *Endpoint: *DELETE /delete-comment/:id**
-- *Authentication*: Yes
-- *Description*: Deletes a comment from a particular book identified by its ID.
+- **Endpoint**: **`DELETE /delete-comment/:id`**
+- **Authentication**: Yes
+- **Description**: Deletes a comment from a particular book identified by its ID.
 
-### *18. Get Comments of a Book*
+### **18. Get Comments of a Book**
 
-- *Endpoint: *GET /comments/:id**
-- *Authentication*: Yes
-- *Description*: Retrieves all comments for a particular book identified by its ID.
+- **Endpoint**: **`GET /comments/:id`**
+- **Authentication**: Yes
+- **Description**: Retrieves all comments for a particular book identified by its ID.
 
-### *19. Modify User's Comment on a Book*
+### **19. Modify User's Comment on a Book**
 
-- *Endpoint: *PATCH /update-comment/:id**
-- *Authentication*: Yes
-- *Description*: Modifies a user's comment on a particular book identified by its ID.
+- **Endpoint**: **`PATCH /update-comment/:id`**
+- **Authentication**: Yes
+- **Description**: Modifies a user's comment on a particular book identified by its ID.
 
-### *20. Get E-Book*
+### **20. Get E-Book**
 
-- *Endpoint: *GET /ebook/:id**
-- *Authentication*: Yes
-- *Description*: Retrieves the E-Book for a particular book identified by its ID.
+- **Endpoint**: **`GET /ebook/:id`**
+- **Authentication**: Yes
+- **Description**: Retrieves the E-Book for a particular book identified by its ID.
 
-## *Authentication API*
+## **Authentication API**
 
 This API documentation outlines the authentication-related endpoints and functionalities provided by the Authentication API for user login, registration, and details editing.
 
-### *1. User Login*
+### **1. User Login**
 
-- *Endpoint: *POST /login**
-- *Authentication*: No
-- *Description*: Allows users to log in by providing valid credentials.
-- *Request Body*:
-    - *email* (string): User's email.
-    - *password* (string): User's password.
-- *Response*:
-    - *token* (string): JWT token for authentication.
-    - *user* (object): User details.
+- **Endpoint**: **`POST /login`**
+- **Authentication**: No
+- **Description**: Allows users to log in by providing valid credentials.
+- **Request Body**:
+    - **`email`** (string): User's email.
+    - **`password`** (string): User's password.
+- **Response**:
+    - **`token`** (string): JWT token for authentication.
+    - **`user`** (object): User details.
 
-### *2. User Registration*
+### **2. User Registration**
 
-- *Endpoint: *POST /register**
-- *Authentication*: No
-- *Description*: Registers a new user.
-- *Request Body*:
-    - *name* (string): User's name.
-    - *email* (string): User's email.
-    - *password* (string): User's password.
-- *Response*:
-    - *token* (string): JWT token for authentication.
-    - *user* (object): Newly registered user details.
+- **Endpoint**: **`POST /register`**
+- **Authentication**: No
+- **Description**: Registers a new user.
+- **Request Body**:
+    - **`name`** (string): User's name.
+    - **`email`** (string): User's email.
+    - **`password`** (string): User's password.
+- **Response**:
+    - **`token`** (string): JWT token for authentication.
+    - **`user`** (object): Newly registered user details.
 
-### *3. Edit User Details*
+### **3. Edit User Details**
 
-- *Endpoint: *POST /edit-details**
-- *Authentication*: Yes
-- *Description*: Allows authenticated users to edit their details.
-- *Request Body*:
-    - *name* (string): New user's name (optional).
-    - *email* (string): New user's email (optional).
-    - *password* (string): New user's password (optional).
-- *Request Headers*:
-    - *Authorization* (string): Bearer token for authentication.
-- *Response*:
-    - *user* (object): Updated user details.
+- **Endpoint**: **`POST /edit-details`**
+- **Authentication**: Yes
+- **Description**: Allows authenticated users to edit their details.
+- **Request Body**:
+    - **`name`** (string): New user's name (optional).
+    - **`email`** (string): New user's email (optional).
+    - **`password`** (string): New user's password (optional).
+- **Request Headers**:
+    - **`Authorization`** (string): Bearer token for authentication.
+- **Response**:
+    - **`user`** (object): Updated user details.
     
 
-## *Admin API*
+## **Admin API**
 
 This API documentation outlines the endpoints and functionalities provided by the Admin API for managing books, users, and other administrative actions.
 
-### *Authentication*
+### **Authentication**
 
 All endpoints require authentication using a JSON Web Token (JWT) passed in the Authorization header.
 
-### *1. Fetch All Books from the Inventory*
+### **1. Fetch All Books from the Inventory**
 
-- *Endpoint: *GET /**
-- *Authentication*: Yes
-- *Description*: Retrieves all books available in the inventory.
+- **Endpoint**: **`GET /`**
+- **Authentication**: Yes
+- **Description**: Retrieves all books available in the inventory.
 
-### *2. Add a Book to the Inventory*
+### **2. Add a Book to the Inventory**
 
-- *Endpoint: *POST /**
-- *Authentication*: Yes
-- *Description*: Adds a new book to the inventory.
-- *Request Body*:
-    - *title* (string): Book title.
-    - *author* (string): Book author.
-    - *genre* (array): Book genres.
-    - *rating* (number): Book rating.
-    - *stock* (number): Number of available copies.
+- **Endpoint**: **`POST /`**
+- **Authentication**: Yes
+- **Description**: Adds a new book to the inventory.
+- **Request Body**:
+    - **`title`** (string): Book title.
+    - **`author`** (string): Book author.
+    - **`genre`** (array): Book genres.
+    - **`rating`** (number): Book rating.
+    - **`stock`** (number): Number of available copies.
 
-### *3. Upload E-Book for a Book*
+### **3. Upload E-Book for a Book**
 
-- *Endpoint: *POST /ebook**
-- *Authentication*: Yes
-- *Description*: Uploads an E-Book for a particular book.
-- *Request Body: Form data with a file field named *file**.
+- **Endpoint**: **`POST /ebook`**
+- **Authentication**: Yes
+- **Description**: Uploads an E-Book for a particular book.
+- **Request Body**: Form data with a file field named **`file`**.
 
-### *4. Issue a Book from Inventory to a User*
+### **4. Issue a Book from Inventory to a User**
 
-- *Endpoint: *PATCH /issue/:id**
-- *Authentication*: Yes
-- *Description*: Issues a book from the inventory to a user identified by their ID.
+- **Endpoint**: **`PATCH /issue/:id`**
+- **Authentication**: Yes
+- **Description**: Issues a book from the inventory to a user identified by their ID.
 
-### *5. Withdraw Issue of a Book from a User*
+### **5. Withdraw Issue of a Book from a User**
 
-- *Endpoint: *PATCH /return/:id**
-- *Authentication*: Yes
-- *Description*: Withdraws the issue of a book from a user identified by their ID.
+- **Endpoint**: **`PATCH /return/:id`**
+- **Authentication**: Yes
+- **Description**: Withdraws the issue of a book from a user identified by their ID.
 
-### *6. Delete a Book from the Inventory*
+### **6. Delete a Book from the Inventory**
 
-- *Endpoint: *DELETE /:id**
-- *Authentication*: Yes
-- *Description*: Deletes a book from the inventory identified by its ID.
+- **Endpoint**: **`DELETE /:id`**
+- **Authentication**: Yes
+- **Description**: Deletes a book from the inventory identified by its ID.
 
-### *7. Delete Account of a User*
+### **7. Delete Account of a User**
 
-- *Endpoint: *DELETE /user/:id**
-- *Authentication*: Yes
-- *Description*: Deletes the account of a user identified by their ID.
+- **Endpoint**: **`DELETE /user/:id`**
+- **Authentication**: Yes
+- **Description**: Deletes the account of a user identified by their ID.
 
-### *8. Get All Requested Books*
+### **8. Get All Requested Books**
 
-- *Endpoint: *GET /requested**
-- *Authentication*: Yes
-- *Description*: Retrieves all books requested by users.
+- **Endpoint**: **`GET /requested`**
+- **Authentication**: Yes
+- **Description**: Retrieves all books requested by users.
 
-### *9. Cancel a Request for a Book*
+### **9. Cancel a Request for a Book**
 
-- *Endpoint: *PATCH /cancel/:id**
-- *Authentication*: Yes
-- *Description*: Cancels a request for a particular book identified by its ID.
+- **Endpoint**: **`PATCH /cancel/:id`**
+- **Authentication**: Yes
+- **Description**: Cancels a request for a particular book identified by its ID.
 
-### *10. Get All Issued Books*
+### **10. Get All Issued Books**
 
-- *Endpoint: *GET /issued**
-- *Authentication*: Yes
-- *Description*: Retrieves all books that are currently issued to users.
+- **Endpoint**: **`GET /issued`**
+- **Authentication**: Yes
+- **Description**: Retrieves all books that are currently issued to users.
 
-### *11. Get All Unissued Books*
+### **11. Get All Unissued Books**
 
-- *Endpoint: *GET /unissued**
-- *Authentication*: Yes
-- *Description*: Retrieves all books that are currently unissued.
+- **Endpoint**: **`GET /unissued`**
+- **Authentication**: Yes
+- **Description**: Retrieves all books that are currently unissued.
 
-### *12. Get All Users*
+### **12. Get All Users**
 
-- *Endpoint: *GET /users**
-- *Authentication*: Yes
-- *Description*: Retrieves details of all users.
+- **Endpoint**: **`GET /users`**
+- **Authentication**: Yes
+- **Description**: Retrieves details of all users.
 
-### *13. Get Subscribers*
+### **13. Get Subscribers**
 
-- *Endpoint: *GET /subscribers**
-- *Authentication*: Yes
-- *Description*: Retrieves a list of subscribers to the newsletter.
+- **Endpoint**: **`GET /subscribers`**
+- **Authentication**: Yes
+- **Description**: Retrieves a list of subscribers to the newsletter.
 
-### *14. Newsletter*
+### **14. Newsletter**
 
-- *Endpoint: *POST /news**
-- *Authentication*: Yes
-- *Description*: Sends a newsletter to all subscribers.
-- *Request Body*:
-    - *subject* (string): Newsletter subject.
-    - *content* (string): Newsletter content.
+- **Endpoint**: **`POST /news`**
+- **Authentication**: Yes
+- **Description**: Sends a newsletter to all subscribers.
+- **Request Body**:
+    - **`subject`** (string): Newsletter subject.
+    - **`content`** (string): Newsletter content.
 
-### *15. Due Books*
+### **15. Due Books**
 
-- *Endpoint: *GET /duebooks**
-- *Authentication*: Yes
-- *Description*: Retrieves a list of books that are due.
+- **Endpoint**: **`GET /duebooks`**
+- **Authentication**: Yes
+- **Description**: Retrieves a list of books that are due.
 
-### *16. Update Stock*
+### **16. Update Stock**
 
-- *Endpoint: *PATCH /update/:id**
-- *Authentication*: Yes
-- *Description*: Updates the stock quantity for a particular book identified by its ID.
-- *Request Body*:
-    - *stock* (number): New stock quantity.
+- **Endpoint**: **`PATCH /update/:id`**
+- **Authentication**: Yes
+- **Description**: Updates the stock quantity for a particular book identified by its ID.
+- **Request Body**:
+    - **`stock`** (number): New stock quantity.
 
-### *17. Get Activity Logs*
+### **17. Get Activity Logs**
 
-- *Endpoint: *GET /logs**
-- *Authentication*: Yes
-- *Description*: Retrieves activity logs for the application.
+- **Endpoint**: **`GET /logs`**
+- **Authentication**: Yes
+- **Description**: Retrieves activity logs for the application.
 
-### *18. Block User*
+### **18. Block User**
 
-- *Endpoint: *PATCH /block/:id**
-- *Authentication*: Yes
-- *Description*: Blocks a user identified by their ID.
+- **Endpoint**: **`PATCH /block/:id`**
+- **Authentication**: Yes
+- **Description**: Blocks a user identified by their ID.
 
-### *19. Unblock User*
+### **19. Unblock User**
 
-- *Endpoint: *PATCH /unblock/:id**
-- *Authentication*: Yes
-- *Description*: Unblocks a user identified by their ID.
+- **Endpoint**: **`PATCH /unblock/:id`**
+- **Authentication**: Yes
+- **Description**: Unblocks a user identified by their ID.
 
-### *20. Notify Book Defaulters*
+### **20. Notify Book Defaulters**
 
-- *Endpoint: *POST /notify**
-- *Authentication*: Yes
-- *Description*: Notifies users who have defaulted on returning books.
+- **Endpoint**: **`POST /notify`**
+- **Authentication**: Yes
+- **Description**: Notifies users who have defaulted on returning books.
 
-### *21. Get List of Blocked Users*
+### **21. Get List of Blocked Users**
 
-- *Endpoint: *GET /blocked**
-- *Authentication*: Yes
-- *Description*: Retrieves a list of blocked users.
+- **Endpoint**: **`GET /blocked`**
+- **Authentication**: Yes
+- **Description**: Retrieves a list of blocked users.
 
-### *22. Get E-Book*
+### **22. Get E-Book**
 
-- *Endpoint: *GET /ebook/:id**
-- *Authentication*: Yes
-- *Description*: Retrieves the E-Book for a particular book identified by its ID.
+- **Endpoint**: **`GET /ebook/:id`**
+- **Authentication**: Yes
+- **Description**: Retrieves the E-Book for a particular book identified by its ID.
 
-### *23. Update Subscription Plan for a Particular User*
+### **23. Update Subscription Plan for a Particular User**
 
-- *Endpoint: *PUT /update-plan/:id**
-- *Authentication*: Yes
-- *Description*: Updates the subscription plan for a particular user identified by their ID.
-- *Request Body*:
-    - *subscriptionPlan* (string): New subscription plan.
+- **Endpoint**: **`PUT /update-plan/:id`**
+- **Authentication**: Yes
+- **Description**: Updates the subscription plan for a particular user identified by their ID.
+- **Request Body**:
+    - **`subscriptionPlan`** (string): New subscription plan.
