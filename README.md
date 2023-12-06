@@ -466,7 +466,7 @@ All endpoints require authentication using a JSON Web Token (JWT) passed in the 
 - **Request Body**:
     - **`subscriptionPlan`** (string): New subscription plan.
  
-##screenshot
+## screenshot
 ![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2013-55-36.png)
 ![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2013-58-41.png)
 ![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2013-59-17.png)
