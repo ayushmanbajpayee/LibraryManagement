@@ -465,3 +465,14 @@ All endpoints require authentication using a JSON Web Token (JWT) passed in the 
 - **Description**: Updates the subscription plan for a particular user identified by their ID.
 - **Request Body**:
     - **`subscriptionPlan`** (string): New subscription plan.
+ 
+##screenshot
+![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2013-55-36.png)
+![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2013-58-41.png)
+![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2013-59-17.png)
+![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2013-59-40.png)
+![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2014-01-31.png)
+![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2014-02-00.png)
+![App Screenshot](https://github.com/ayushmanbajpayee/LibraryManagement/blob/main/screenshot/screenshot/Screenshot%20from%202023-12-06%2014-04-30.png)
+
+
